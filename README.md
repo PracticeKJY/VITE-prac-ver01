@@ -1,4 +1,4 @@
-###### EUID ╳ Likelion
+###### EUID ╳ Likelion ╳
 
 # 상태가 없는 React 컴포넌트
 
