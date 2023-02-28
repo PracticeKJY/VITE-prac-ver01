@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import classes from "./App.module.css";
-import { Button, A11yHidden, Nav } from "@/components";
+import { Button, A11yHidden, Nav, SkipToContent } from "@/components";
 
 function App() {
   const [navList] = useState([
@@ -12,6 +12,8 @@ function App() {
 
   return (
     <div className={classes.container}>
+      <SkipToContent to="#snack" />
+
       <Nav as="h3" headline="상품목록" list={navList} />
 
       <h2 className={classes.headline}>Button 컴포넌트(stateless)</h2>
@@ -20,9 +22,9 @@ function App() {
         <Button>회원가입</Button>
         <Button secondary>로그인</Button>
       </div>
-      <section>
+      <section id="snack">
         <A11yHidden as="h2" focusable>
-          접근성 준수한 제목
+          맜있는 과자
         </A11yHidden>
         <p>
           <A11yHidden as="a" href="#invisible" focusable>

@@ -11,7 +11,7 @@ export function Button({
   ...restProps
 }) {
   // console.log(isSecondary);
-  console.log(disabled);
+  // console.log(disabled);
 
   return (
     <button
