@@ -1,3 +1,3 @@
 export function Footer() {
-  return <footer> 앱 헤더</footer>;
+  return <footer> 앱 푸터</footer>;
 }

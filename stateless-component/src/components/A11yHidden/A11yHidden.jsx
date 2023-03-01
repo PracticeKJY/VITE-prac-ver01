@@ -26,6 +26,6 @@ export const A11yHidden = forwardRef(function A11yeee(
 // 함수 내부에서는 기본 값 설정
 
 // _c  => displayName으로 이름값을 명시적으로 선언해줌 ( 기본값 : _c )
-A11yHidden.displayName = "범샘";
+A11yHidden.displayName = "A11yHidden";
 //혹은 forwardRef의 선언에서 화살표함수로 컴포넌트를 선언할게 아니라,
 // 함수선언문 (fucntion 이름(){}) 으로해주면 그 이름이 명시적으로 선언됨
