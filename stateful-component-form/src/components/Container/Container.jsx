@@ -1,5 +1,5 @@
-import { string } from 'prop-types';
-import classes from './Container.module.scss';
+import { string, node } from "prop-types";
+import classes from "./Container.module.scss";
 
 /* Component ---------------------------------------------------------------- */
 
@@ -21,11 +21,12 @@ export function Container({
 /* Props -------------------------------------------------------------------- */
 
 Container.defaultProps = {
-  as: 'div',
-  className: '',
+  as: "div",
+  className: "",
 };
 
 Container.propTypes = {
   as: string,
   className: string,
+  children: node,
 };

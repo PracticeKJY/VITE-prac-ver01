@@ -1,6 +1,6 @@
-import { string } from 'prop-types';
-import { Header, Footer, Container } from '@/components';
-import classes from './Layout.module.scss';
+import { node, string } from "prop-types";
+import { Header, Footer, Container } from "@/components";
+import classes from "./Layout.module.scss";
 
 /* Component ---------------------------------------------------------------- */
 
@@ -21,9 +21,10 @@ export function BaseLayout({ className, children, ...restProps }) {
 /* Props -------------------------------------------------------------------- */
 
 BaseLayout.defaultProps = {
-  className: '',
+  className: "",
 };
 
 BaseLayout.propTypes = {
   className: string,
+  children: node,
 };
