@@ -1,0 +1,33 @@
+.control {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 4px;
+  // background: #ff0;
+  margin-bottom: 4px;
+  padding: 8px;
+
+  //scss => &로 mode를 설정해줄수 있음
+  //console.log(classes['control-vertical']); 로 들어온 속성을 찍어볼수도있음
+
+  &--inline {
+    display: inline-flex;
+  }
+
+  &--vertical {
+    flex-direction: column;
+  }
+}
+
+.label {
+  // position: absolute;
+  // top: 30%;
+  // left: 0;
+  // translate: 0, -50%;
+}
+
+//clamp가 뭐인가?
+.input {
+  padding: 8px;
+  width: clamp(320px, 20vw, 500px);
+}

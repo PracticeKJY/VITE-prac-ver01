@@ -3,3 +3,4 @@ export * from "./A11yHidden/A11yHidden";
 export * from "./Nav/Nav";
 export * from "./SkipToContent/SkipToContent";
 export * from "./Layout/Layout";
+export * from "./FormInput/FormInput";
