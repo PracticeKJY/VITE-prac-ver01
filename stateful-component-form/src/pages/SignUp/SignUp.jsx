@@ -1,5 +1,5 @@
-import { useEffect, useRef, useState } from "react";
-import { BaseLayout, FormInput, Button } from "@/components";
+import { useRef, useState } from "react";
+import { EventSubunSub, BaseLayout, FormInput, Button } from "@/components";
 import classes from "./SignUp.module.scss";
 
 /* Intialization ------------------------------------------------------------ */
@@ -19,10 +19,8 @@ const initialFormState = {
 export default function SignUp() {
   const formStateRef = useRef(initialFormState);
 
-  useEffect(() => {
-    console.log("계속 마운트와 업데이트 되고 있어요.");
-    console.log(formStateRef);
-  });
+  //리랜더링을 일부러 유발하기 위해 상태를 선언
+  const [message, setMessage] = useState("업데이트전");
 
   const handleReset = (e) => {
     e.preventDefault();
@@ -51,6 +49,18 @@ export default function SignUp() {
 
   return (
     <BaseLayout className={classes.SignUp}>
+      <EventSubunSub />
+      <p>{message}</p>
+      <button
+        type="button"
+        onClick={() =>
+          setMessage(
+            message.includes("업데이트전") ? "업데이트후" : "업데이트전"
+          )
+        }
+      >
+        업데이트
+      </button>
       <h2>회원가입 페이지</h2>
       <form
         className={classes.form}

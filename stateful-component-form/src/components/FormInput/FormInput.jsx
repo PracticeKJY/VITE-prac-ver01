@@ -24,7 +24,7 @@ export function FormInput({
     //이벤트 연결대상 참조
     const input = inputRef.current;
     const component = input.parentElement;
-    console.log(component);
+    // console.log(component);
     //이벤트연결
     // console.log(inputRef.current);
     input.addEventListener("blur", (e) => {
