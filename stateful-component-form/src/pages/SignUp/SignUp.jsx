@@ -20,6 +20,7 @@ export default function SignUp() {
   const formStateRef = useRef(initialFormState);
 
   //리랜더링을 일부러 유발하기 위해 상태를 선언
+  const [isVisible, setIsVisible] = useState(true);
   const [message, setMessage] = useState("업데이트전");
 
   const handleReset = (e) => {
@@ -49,7 +50,13 @@ export default function SignUp() {
 
   return (
     <BaseLayout className={classes.SignUp}>
-      <EventSubunSub />
+      {isVisible && <EventSubunSub />}
+      <button
+        type="button"
+        onClick={() => setMessage(setIsVisible(!isVisible))}
+      >
+        {isVisible ? "unmount" : "mount"}
+      </button>
       <p>{message}</p>
       <button
         type="button"
