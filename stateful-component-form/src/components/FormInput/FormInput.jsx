@@ -15,8 +15,6 @@ export function FormInput({
   ...restProps
 }) {
   const id = useId();
-  const value = restProps;
-  const inputed = value?.length > 0;
 
   // console.log(value.value);
   // restProps.value.length > 0
@@ -41,7 +39,7 @@ export function FormInput({
 
   const combineClassNames = `${classes.FormInput} ${
     vertical ? classes.FormInputVertical : ""
-  } ${inputed ? classes.inputed : ""}`.trim();
+  }`.trim();
 
   return (
     <div className={combineClassNames}>

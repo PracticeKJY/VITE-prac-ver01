@@ -26,11 +26,11 @@ export default function SignUp() {
 
   const handleReset = (e) => {
     e.preventDefault();
-
-    setName("");
-    setEmail("");
-    setPassword("");
-    setPasswordConfirm("");
+    console.log("reset");
+    // setName("");
+    // setEmail("");
+    // setPassword("");
+    // setPasswordConfirm("");
   };
 
   const handleSubmit = (e) => {
