@@ -1,7 +1,9 @@
-import { useId } from "react";
+import { useEffect, useId, useRef } from "react";
 import { bool, string } from "prop-types";
 import { A11yHidden } from "@/components";
 import classes from "./FormInput.module.scss";
+
+// console.log(classes.inputed);
 
 /* Component ---------------------------------------------------------------- */
 
@@ -13,11 +15,29 @@ export function FormInput({
   ...restProps
 }) {
   const id = useId();
-  // restProps.value.length > 0
   const value = restProps;
   const inputed = value?.length > 0;
 
-  console.log(value.value);
+  // console.log(value.value);
+  // restProps.value.length > 0
+
+  const inputRef = useRef(null);
+  useEffect(() => {
+    //이벤트 연결대상 참조
+    const input = inputRef.current;
+    const component = input.parentElement;
+    console.log(component);
+    //이벤트연결
+    // console.log(inputRef.current);
+    input.addEventListener("blur", (e) => {
+      if (e.target.value.length > 0) {
+        component.classList.add(classes.inputed);
+      } else {
+        component.classList.remove(classes.inputed);
+      }
+    });
+  }, []);
+  //, [] => 1번만연결
 
   const combineClassNames = `${classes.FormInput} ${
     vertical ? classes.FormInputVertical : ""
@@ -26,7 +46,13 @@ export function FormInput({
   return (
     <div className={combineClassNames}>
       {renderLabel(id, label, invisibleLabel)}
-      <input id={id} type={type} className={classes.input} {...restProps} />
+      <input
+        ref={inputRef}
+        id={id}
+        type={type}
+        className={classes.input}
+        {...restProps}
+      />
     </div>
   );
 }

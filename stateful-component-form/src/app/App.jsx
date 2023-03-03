@@ -3,8 +3,8 @@ import classes from "./App.module.scss";
 /* Pages -------------------------------------------------------------------- */
 
 import Home from "@/pages/Home/Home";
-import SignUp from "@/pages/SignUp/SignUp";
 import SignIn from "@/pages/SignIn/SignIn";
+import SignUp from "@/pages/SignUp/SignUp";
 
 /* Component ---------------------------------------------------------------- */
 // 모듈을 사용할 때 클래스이름을 마음대로 줘도됨 ->CRA만  why? css모듈의 네이밍이 컴포넌트_클래스_해쉬 이기 떄문.
