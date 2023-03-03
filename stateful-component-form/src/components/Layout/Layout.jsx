@@ -4,6 +4,8 @@ import classes from "./Layout.module.scss";
 
 /* Component ---------------------------------------------------------------- */
 
+
+
 export function BaseLayout({ className, children, ...restProps }) {
   const combineClassNames = `${classes.BaseLayout} ${className}`.trim();
 
@@ -28,3 +30,9 @@ BaseLayout.propTypes = {
   className: string,
   children: node,
 };
+
+//tsx
+// React.ReactNode
+// children : JSX.Element or React.ReactElement
+
+

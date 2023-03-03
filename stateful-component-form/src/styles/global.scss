@@ -5,12 +5,12 @@ body {
   color: #000;
 
   box-sizing: border-box;
-
+//body의 가상요소선택자들
   &::before,
   &::after {
     box-sizing: inherit;
   }
-
+//모든 자손 + 가상요소선택자들
   * {
     box-sizing: border-box;
     &::before,

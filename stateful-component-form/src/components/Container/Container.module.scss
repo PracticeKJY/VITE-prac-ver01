@@ -1,6 +1,10 @@
+//변수화
 $min-width: 320px;
 $max-width: 1280px;
 
+
+// margin에 적은것 처럼, 중첩규칙 가능
+// clamp사용법 => (최소값, vw ,최대값)
 .Container {
   width: clamp($min-width, 90vw, $max-width);
   margin: {
