@@ -1,4 +1,4 @@
-export * from "./Nav/nav";
+export * from "./Nav/Nav";
 export * from "./Layout/Layout";
 export * from "./Header/Header";
 export * from "./Footer/Footer";

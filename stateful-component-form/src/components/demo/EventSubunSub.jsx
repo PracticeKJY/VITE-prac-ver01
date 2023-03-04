@@ -17,7 +17,7 @@ export function EventSubunSub() {
 
   //useLayoutEffect가 먼저 실행됨을 console.log()로 확인할 수 있음
   useLayoutEffect(() => {
-    console.log("useLayoutEffect");
+    console.log("useLayoutEffect🧏‍♂️");
   }, []);
 
   //클린업이 왜필요해?
@@ -26,13 +26,13 @@ export function EventSubunSub() {
   useEffect(() => {
     console.log("useEffect");
     let clearIntervalId = setInterval(() => {
-      console.count("키값도넣을수있어요");
+      console.count("count : ");
     }, 2000);
-    console.log({ clearIntervalId });
+    // console.log({ clearIntervalId });
 
     //cleanup
     return function cleanup() {
-      console.log("구독해제형님 인사드립니다");
+      console.log("구독해제👼");
       clearInterval(clearIntervalId);
     };
   });

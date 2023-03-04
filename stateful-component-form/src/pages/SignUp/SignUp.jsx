@@ -1,6 +1,9 @@
 import { useRef, useState } from "react";
 import { EventSubunSub, BaseLayout, FormInput, Button } from "@/components";
 import classes from "./SignUp.module.scss";
+import { validator } from "@/utils";
+
+console.log(validator.isId("as", { min: 3, max: 11 }));
 
 /* Intialization ------------------------------------------------------------ */
 
