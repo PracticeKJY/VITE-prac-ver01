@@ -1,5 +1,7 @@
 ###### EUID ╳ Likelion
 
+# Storybook Practice
+
 # 상태를 가지는 React 컴포넌트
 
 상태를 제어하는 React 컴포넌트에 대해 학습합니다.
