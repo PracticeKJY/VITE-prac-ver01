@@ -1,6 +1,7 @@
 import { useRef /* useState */ } from 'react';
 import { BaseLayout, FormInput, Button } from '@/components';
 import classes from './SignUp.module.scss';
+import { useDocumentTitle } from '@/hooks/useDocumentTitle.js';
 // import { EventSubUnsub } from '@/demo/EventSubUnsub';
 // import { validator } from '@/utils';
 
@@ -21,6 +22,8 @@ export default function SignUp() {
   // const [message, setMessage] = useState('before update');
 
   const formStateRef = useRef(initialFormState);
+
+  useDocumentTitle('회원가입 -> Likelion 4th');
 
   const handleReset = (e) => {
     e.preventDefault();
