@@ -19,11 +19,16 @@ export const LogolabelXNavO = {
     ],
   },
 };
+
+LogolabelXNavO.storyName = '로고레이블 O, Nav X';
+
 export const LogolabelONavO = {
   args: {
     navList: LogolabelXNavO.args.navList,
   },
 };
+
+LogolabelONavO.storyName = '로고레이블 O, Nav O';
 
 export const LogolabelXNavX = {
   args: {
