@@ -6,7 +6,7 @@ import classes from './Button.module.scss';
 
 export function Button({ secondary: isSecondary, disabled, ...restProps }) {
   let buttonStyle = {};
-  function getClassName(disabled, isSecondary, ...restprops) {
+  function getClassName(disabled, isSecondary) {
     if (!disabled) {
       buttonStyle = {
         backgroundColor: !isSecondary
