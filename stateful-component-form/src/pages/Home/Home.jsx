@@ -1,4 +1,4 @@
-import { BaseLayout, Button } from '@/components';
+import { BaseLayout, Button, Logo } from '@/components';
 import classes from './Home.module.scss';
 import { Secondary } from './../../stories/Button.stories';
 
@@ -14,6 +14,10 @@ export default function Home() {
           <Button secondary children="로그인" />
           <Button disabled children="로그인" />
           <Button secondary disabled children="로그인" />
+        </div>
+        <div className={classes.logoGroup}>
+          <Logo />
+          <Logo rotation={90} />
         </div>
       </div>
     </BaseLayout>
