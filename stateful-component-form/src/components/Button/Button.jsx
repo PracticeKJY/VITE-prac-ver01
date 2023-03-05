@@ -6,23 +6,26 @@ import classes from './Button.module.scss';
 
 export function Button({ secondary: isSecondary, disabled, ...restProps }) {
   let buttonStyle = {};
+  function getClassName(disabled, isSecondary, ...restprops) {
+    if (!disabled) {
+      buttonStyle = {
+        backgroundColor: !isSecondary
+          ? getColor('primary/400')
+          : getColor('white'),
+        color: !isSecondary ? getColor('white') : getColor('primary/400'),
+      };
+      // console.log('true : ', disabled);
+    } else {
+      // console.log('false : ', disabled);
+      buttonStyle = {
+        backgroundColor: !isSecondary
+          ? getColor('primary/50')
+          : getColor('gray/50'),
+        color: !isSecondary ? getColor('primary/400') : getColor('gray/300'),
+      };
+    }
 
-  if (!disabled) {
-    buttonStyle = {
-      backgroundColor: !isSecondary
-        ? getColor('primary/400')
-        : getColor('white'),
-      color: !isSecondary ? getColor('white') : getColor('primary/400'),
-    };
-    // console.log('true : ', disabled);
-  } else {
-    // console.log('false : ', disabled);
-    buttonStyle = {
-      backgroundColor: !isSecondary
-        ? getColor('primary/50')
-        : getColor('gray/50'),
-      color: !isSecondary ? getColor('primary/400') : getColor('gray/300'),
-    };
+    return buttonStyle;
   }
 
   return (
@@ -30,12 +33,7 @@ export function Button({ secondary: isSecondary, disabled, ...restProps }) {
       type="button"
       disabled={disabled}
       className={classes.Button}
-      style={{
-        backgroundColor: !isSecondary
-          ? getColor('primary/400')
-          : getColor('white'),
-        color: !isSecondary ? getColor('white') : getColor('primary/400'),
-      }}
+      style={getClassName(disabled, isSecondary)}
       {...restProps}
     />
   );
