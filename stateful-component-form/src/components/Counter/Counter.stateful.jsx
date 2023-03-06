@@ -96,19 +96,11 @@ export function CounterStateful({
 
   const combineClassNames = classNames(classes.Counter, className);
 
-  // const handleIncrement = useCallback(() => {
-  //   console.log('증가');
-  //   setCount((count) => count + step);
-  // }, [step]);
-  const handleIncrement = () => {
+  const handleIncrement = useCallback(() => {
     console.log('증가');
     setCount((count) => count + step);
-  };
+  }, [step]);
 
-  // const handleDecrement = useCallback(() => {
-  //   console.log('감소');
-  //   setCount((count) => count - step);
-  // }, [step]);
   const handleDecrement = useCallback(() => {
     console.log('감소');
     setCount((count) => count - step);
