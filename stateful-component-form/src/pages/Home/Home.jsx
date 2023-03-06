@@ -1,10 +1,30 @@
-import { BaseLayout, Button, Logo } from '@/components';
+import {
+  BaseLayout,
+  Button,
+  Logo,
+  CounterStateless,
+  CounterStateful,
+} from '@/components';
 import classes from './Home.module.scss';
 import { Secondary } from './../../stories/Button.stories';
+import { useState, useCallback } from 'react';
 
 /* Component ---------------------------------------------------------------- */
 
 export default function Home() {
+  const [count, setCount] = useState(11);
+  const [step] = useState(3);
+
+  const onInc = () => {
+    setCount((count) => count + step);
+  };
+
+  // const MemoOnInc = useCallback(onInc, [step]);
+
+  const onDec = useCallback(() => {
+    setCount((count) => count - step);
+  }, [step]);
+
   return (
     <BaseLayout>
       <div className={classes.container}>
@@ -19,8 +39,16 @@ export default function Home() {
           <Logo />
           <Logo rotation={90} />
         </div>
+        Stateless
+        <CounterStateless
+          count={count}
+          step={step}
+          onInc={onInc}
+          onDec={onDec}
+        />
+        Stateful
+        <CounterStateful count={count} step={step} />
       </div>
     </BaseLayout>
   );
 }
-

@@ -10,3 +10,5 @@ export * from './HomeLink/HomeLink';
 export * from './FormInput/FormInput';
 export * from './A11yHidden/A11yHidden';
 export * from './SkipToContent/SkipToContent';
+export * from './Counter/Counter.stateful';
+export * from './Counter/Counter.stateless';
